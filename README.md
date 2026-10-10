@@ -18,7 +18,7 @@ jupyter notebook
 
 A browser tab opens. Click into `Course/00 Introduction` and open `00. Introduction.ipynb`. Run a cell with **Shift+Enter**, or run the whole notebook from the menu with **Run → Run All Cells** (**Kernel → Restart & Run All** for a clean start). You can also open the notebooks directly in VS Code with the Jupyter extension.
 
-Every notebook runs top to bottom with no errors. Most take a few seconds; the slowest (A1, A4 and A5 in `Applications/`) take up to about a minute.
+Every notebook runs top to bottom with no errors. Most take a few seconds; the slowest (A1, A4 and A5 in `Applications/`) take between half a minute and a minute and a half. To check every notebook in one go (headless, nothing is saved), run `python tools/check_notebooks.py`.
 
 ## Course map
 
