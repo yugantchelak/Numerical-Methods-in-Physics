@@ -102,3 +102,5 @@ Basic rundown of the project:
     - Physics applications notebooks ✅ (Applications/A1-A6, each with projects)
     - Self-checking practice problems ✅ (Practice/)
     - Basic Git/Github to present projects.
+
+<!-- if you're reading this, you read the source. Nice. -->
