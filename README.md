@@ -16,48 +16,48 @@ This installs `numpy` (2.0 or newer), `scipy`, `matplotlib`, `pandas` and `jupyt
 jupyter notebook
 ```
 
-A browser tab opens. Click into `Course/00 Introduction` and open `00. Introduction.ipynb`. Run a cell with **Shift+Enter**, or run the whole notebook from the menu with **Run → Run All Cells** (**Kernel → Restart & Run All** for a clean start). You can also open the notebooks directly in VS Code with the Jupyter extension.
+A browser tab opens. Open the `Course` folder and click `00-introduction.ipynb`. Run a cell with **Shift+Enter**, or run the whole notebook from the menu with **Run → Run All Cells** (**Kernel → Restart & Run All** for a clean start). You can also open the notebooks directly in VS Code with the Jupyter extension.
 
 Every notebook runs top to bottom with no errors. Most take a few seconds; the slowest (A1, A4 and A5 in `Applications/`) take between half a minute and a minute and a half. To check every notebook in one go (headless, nothing is saved), run `python tools/check_notebooks.py`.
 
 ## Course map
 
-All notebooks need only `numpy`, `scipy` and `matplotlib` (plus `pandas` in Chapter 0); see `requirements.txt`. Chapters 0, 3b and 4-11 end with a **Problems** section (the problems for Chapter 3 are at the end of 03b); each applications notebook ends with **Projects**.
+All the chapters live together in `Course/`, numbered in reading order, with the datasets for Chapter 11 in `Course/data/`. Root finding is split over two chapters: Chapter 2 (rearrangement and bisection) and Chapter 3 (false position, Newton-Raphson, secant and friends).
 
-There is no Chapter 2 folder: the folder numbering jumps from `01` to `03`, and Chapter 3 is split into two notebooks (`03` and `03b`). The "Basic rundown" roadmap further down predates the folders and keeps its own numbering.
+All notebooks need only `numpy`, `scipy` and `matplotlib` (plus `pandas` in Chapter 0); see `requirements.txt`. Chapters 0 and 3-11 end with a **Problems** section (Chapter 3's problems cover Chapter 2 too); each applications notebook ends with **Projects**.
 
 | Folder | Notebook | Methods covered |
 | :--- | :--- | :--- |
-| `Course/00 Introduction` | `00. Introduction.ipynb` | why numerical methods, limits and convergence |
-| `Course/01 Crash Course in Python and Jupyter` | `01. Python and Jupyter.ipynb` | Python basics |
-| `Course/03 Algebraic and Transcendental Equations` | `03-algebraic-and-transcendental-equations.ipynb` | rearrangement, bisection, finding a sign change in an array |
-| | `03b-newton-raphson-secant-and-false-position.ipynb` | false position (linear interpolation), Newton-Raphson, secant, order of convergence, Brent's method, finding all roots |
-| `Course/04 Numerical Differentiation and Integration` | `04-numerical-differentiation-and-integration.ipynb` | forward/backward/central differences, round-off vs truncation, Richardson extrapolation, midpoint, trapezium, Simpson, Romberg, Gauss-Legendre, improper integrals |
-| `Course/05 Ordinary Differential Equations` | `05-ordinary-differential-equations.ipynb` | direction fields and isoclines, Euler, Heun, Taylor series method, RK4, systems/higher-order ODEs, velocity Verlet (symplectic), adaptive step size, stiff equations and implicit Euler, shooting method |
-| `Course/06 Linear Algebra and Eigenvalue Problems` | `06-linear-algebra-and-eigenvalue-problems.ipynb` | Gaussian elimination, pivoting, LU decomposition, condition number, Thomas algorithm, Jacobi/Gauss-Seidel/SOR, power and inverse iteration, least squares |
-| `Course/07 Partial Differential Equations` | `07-partial-differential-equations.ipynb` | FTCS, von Neumann stability, Crank-Nicolson, wave equation and CFL, upwind/Lax-Wendroff advection, relaxation for Laplace's equation |
-| `Course/08 Fourier Transforms and the FFT` | `08-fourier-transforms-and-the-fft.ipynb` | DFT, recursive FFT, power spectra, aliasing, windowing, filtering, convolution theorem, spectral differentiation |
-| `Course/09 Interpolation and Curve Fitting` | `09-interpolation-and-curve-fitting.ipynb` | linear and Lagrange interpolation, Runge's phenomenon, Chebyshev nodes, cubic splines, chi-squared, `curve_fit`, residuals, bootstrap |
-| `Course/10 Monte Carlo Methods` | `10-monte-carlo-methods.ipynb` | pseudo-random generators, MC integration, curse of dimensionality, inverse-transform and rejection sampling, importance sampling, random walks, Metropolis, simulated annealing |
-| `Course/11 Working with Real Data` | `11-working-with-real-data.ipynb` | real data. Files in `data/` (sources in `data/README.md`): NOAA Mauna Loa CO2, 1958-2026 (least-squares decomposition, growth rate, spectrum); SILSO monthly sunspot numbers since 1749 (smoothing, periodogram, cycle detection, bootstrap); GWOSC strain from both LIGO detectors for GW150914 (Welch PSD, whitening, filtering, cross-correlation, matched filtering). Small published tables typed into the notebook: JPL planetary orbits and Jupiter's moons (Kepler's third law, mass of Jupiter) and NIST hydrogen Balmer wavelengths (Rydberg constant) |
+| `Course` | `00-introduction.ipynb` | why numerical methods, limits and convergence |
+| | `01-python-and-jupyter.ipynb` | Python basics |
+| | `02-algebraic-and-transcendental-equations.ipynb` | rearrangement, bisection, finding a sign change in an array |
+| | `03-newton-raphson-secant-and-false-position.ipynb` | false position (linear interpolation), Newton-Raphson, secant, order of convergence, Brent's method, finding all roots |
+| | `04-numerical-differentiation-and-integration.ipynb` | forward/backward/central differences, round-off vs truncation, Richardson extrapolation, midpoint, trapezium, Simpson, Romberg, Gauss-Legendre, improper integrals |
+| | `05-ordinary-differential-equations.ipynb` | direction fields and isoclines, Euler, Heun, Taylor series method, RK4, systems/higher-order ODEs, velocity Verlet (symplectic), adaptive step size, stiff equations and implicit Euler, shooting method |
+| | `06-linear-algebra-and-eigenvalue-problems.ipynb` | Gaussian elimination, pivoting, LU decomposition, condition number, Thomas algorithm, Jacobi/Gauss-Seidel/SOR, power and inverse iteration, least squares |
+| | `07-partial-differential-equations.ipynb` | FTCS, von Neumann stability, Crank-Nicolson, wave equation and CFL, upwind/Lax-Wendroff advection, relaxation for Laplace's equation |
+| | `08-fourier-transforms-and-the-fft.ipynb` | DFT, recursive FFT, power spectra, aliasing, windowing, filtering, convolution theorem, spectral differentiation |
+| | `09-interpolation-and-curve-fitting.ipynb` | linear and Lagrange interpolation, Runge's phenomenon, Chebyshev nodes, cubic splines, chi-squared, `curve_fit`, residuals, bootstrap |
+| | `10-monte-carlo-methods.ipynb` | pseudo-random generators, MC integration, curse of dimensionality, inverse-transform and rejection sampling, importance sampling, random walks, Metropolis, simulated annealing |
+| | `11-working-with-real-data.ipynb` | real data. Files in `Course/data/` (sources in `Course/data/README.md`): NOAA Mauna Loa CO2, 1958-2026 (least-squares decomposition, growth rate, spectrum); SILSO monthly sunspot numbers since 1749 (smoothing, periodogram, cycle detection, bootstrap); GWOSC strain from both LIGO detectors for GW150914 (Welch PSD, whitening, filtering, cross-correlation, matched filtering). Small published tables typed into the notebook: JPL planetary orbits and Jupiter's moons (Kepler's third law, mass of Jupiter) and NIST hydrogen Balmer wavelengths (Rydberg constant) |
 | `Applications` | `A1-astrophysics.ipynb` | Kepler's equation, Lane-Emden stars and the Chandrasekhar mass, Lagrange points, N-body (figure-eight, Trojans), galaxy rotation curves |
 | | `A2-quantum-mechanics.ipynb` | finite square well, Numerov shooting, matrix Hamiltonians, double-well tunnelling, hydrogen, Crank-Nicolson wavepacket scattering |
 | | `A3-optics-and-waves.ipynb` | Wien's law, Fraunhofer diffraction by FFT (Airy, JWST-like mirror), Fresnel integrals, transfer-matrix thin films/Bragg mirrors, graded-index ray tracing and mirages |
 | | `A4-classical-mechanics-and-chaos.ipynb` | nonlinear pendulum, driven pendulum, Poincaré sections, bifurcation diagram, Lorenz attractor, Lyapunov exponents |
 | | `A5-statistical-and-thermal-physics.ipynb` | Debye/Einstein heat capacity, Fermi gas chemical potential, 2D Ising model, random walks vs diffusion |
 | | `A6-electromagnetism.ipynb` | Biot-Savart and Helmholtz coils, Boris particle pusher, magnetic bottle, sparse Poisson solver for capacitance, 1D FDTD Maxwell solver |
-| `Practice` | `practice-problems.ipynb` / `practice-solutions.ipynb` | 12 exercises across Chapters 3-10, each checked automatically by a `check()` cell (✅ / ❌ / ⏳ not attempted), with worked solutions |
+| `Practice` | `practice-problems.ipynb` / `practice-solutions.ipynb` | 12 exercises across Chapters 2-10, each checked automatically by a `check()` cell (✅ / ❌ / ⏳ not attempted), with worked solutions |
 
-Basic rundown of the project:
+Basic rundown of the project (the original plan; see the course map above for the chapter numbers):
 
-### 0. Introduction ✅
+### Introduction ✅
 
     Rationale for this resource:
     - Quick demo of Python and playthrough using some examples literally copy and paste.
     - Encouraged to break the code, you can always start again.
     - Play around with the code and see what you can screw up.
 
-### 1. Crash Course in Python
+### Crash Course in Python
 
     a. Introduction to Python, what it is and how to use it:
     - definition of python ✅
@@ -76,41 +76,41 @@ Basic rundown of the project:
 
     c. Modules and organising file structure.
 
-### 2. Simple Numerical Methods:
+### Simple Numerical Methods:
 
     Solving Equations using numerical methods
-    - Rearranging equations ✅
-    - linear interpolation ✅ (03b, false position)
-    - Binary Chopping ✅ (03 + 03b)
-    - Newton-Raphson Method ✅ (03b)
-    - Iteration ✅
-    - Secant method, Brent's method ✅ (03b)
+    - Rearranging equations ✅ (Ch. 2)
+    - linear interpolation ✅ (Ch. 3, false position)
+    - Binary Chopping ✅ (Ch. 2)
+    - Newton-Raphson Method ✅ (Ch. 3)
+    - Iteration ✅ (Ch. 2)
+    - Secant method, Brent's method ✅ (Ch. 3)
 
-### 3. Advanced Numerical Methods:
+### Advanced Numerical Methods:
 
     Integration and differentiation
-    - Trapezium Rule ✅ (04)
-    - Simpson's Rule ✅ (04)
-    - Romberg and Gaussian quadrature ✅ (04)
-    - Monte-Carlo Method ✅ (10)
-    - Finite-Difference ✅ (04)
-    - Differential Equations ✅ (05)
-    - Difference Equations ✅ (05, 07)
-    - Taylor Series Solution ✅ (05)
-    - Runge-Kutta Method ✅ (05)
-    - Isoclines ✅ (05)
-    - Higher-order Equations ✅ (05)
-    - Linear algebra and eigenvalue problems ✅ (06)
-    - PDEs ✅ (07)
-    - Interpolation and curve fitting ✅ (09)
+    - Trapezium Rule ✅ (Ch. 4)
+    - Simpson's Rule ✅ (Ch. 4)
+    - Romberg and Gaussian quadrature ✅ (Ch. 4)
+    - Monte-Carlo Method ✅ (Ch. 10)
+    - Finite-Difference ✅ (Ch. 4)
+    - Differential Equations ✅ (Ch. 5)
+    - Difference Equations ✅ (Ch. 5, 7)
+    - Taylor Series Solution ✅ (Ch. 5)
+    - Runge-Kutta Method ✅ (Ch. 5)
+    - Isoclines ✅ (Ch. 5)
+    - Higher-order Equations ✅ (Ch. 5)
+    - Linear algebra and eigenvalue problems ✅ (Ch. 6)
+    - PDEs ✅ (Ch. 7)
+    - Interpolation and curve fitting ✅ (Ch. 9)
 
-### 4. Extreme Numerical Methods
+### Extreme Numerical Methods
 
-    - Fourier Transforms ✅ (08)
+    - Fourier Transforms ✅ (Ch. 8)
     - Laplace Transforms
-    - Fast-Fourier Transform ✅ (08)
+    - Fast-Fourier Transform ✅ (Ch. 8)
 
-### 5. Data Structures and Algorithms
+### Data Structures and Algorithms
 
     General Overview of Computer Science Methods:
     - Hash Maps
